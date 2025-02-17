@@ -66,13 +66,34 @@
     "lazyLoad": false,
     "robotsSwitcher": false,
     "sitemapSwitcher": false,
-    "sitemapSwitcherAuto": false,
+    "sitemapSwitcherAuto": "on",
     "siteUrl": false,
-    "cookiesAlert": false,
-    "gdpr": false,
+    "cookiesAlert": {
+      "customDialogSelector": false,
+      "colorText": "#424a4d",
+      "colorBg": "#ffffff",
+      "colorButton": "#656383",
+      "rejectColor": "#ffffff",
+      "colorLink": "#424a4d",
+      "underlineLink": true,
+      "opacityOverlay": "0",
+      "bgOpacity": "49",
+      "text": "Polityka plików cookie. \nNasza strona internetowa segoline.pl używa plików cookie w celu zapewnienia prawidłowego działania, poprawy wygody użytkowania oraz analizy ruchu na stronie.\nRodzaje plików cookie, które wykorzystujemy:\nNiezbędne – umożliwiające podstawowe funkcjonowanie strony.\nAnalityczne – pomagające nam zrozumieć, jak użytkownicy korzystają ze strony (Google Analytics).\nFunkcjonalne – zapamiętujące Twoje preferencje (np. język).\nMarketingowe – umożliwiające wyświetlanie spersonalizowanych treści i reklam.\nMożesz zarządzać swoimi ustawieniami plików cookie lub je wyłączyć w ustawieniach przeglądarki. Szczegółowe informacje znajdziesz w naszej Polityce prywatności.\n\nCzy akceptujesz użycie plików cookie?",
+      "textButton": "ACCEPT",
+      "rejectText": "REJECT"
+    },
+    "gdpr": {
+      "colorText": "#a7a7a7",
+      "colorLink": "#149dcc",
+      "underlineLink": false,
+      "text": "Korzystając zgadzasz się z treścią dokuemntów <a href='terms.html'>Warunki użytkowania</a> i <a href='policy.html'>Polityka prywatności</a>."
+    },
     "pwa-switcher": false,
     "screenshot": "screenshot.png",
-    "publishChangesOnly": false
+    "publishChangesOnly": false,
+    "google-analytics": "G-W4EC0K50FR",
+    "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
+    "cookiesAlertType": "2"
   },
   "pages": {
     "index.html": {
@@ -83,7 +104,7 @@
         "header_custom": "",
         "footer_custom": "",
         "html_before": "",
-        "meta_image": "@PROJECT_PATH@/assets/images/horizontal_small-273x121.png"
+        "meta_image": "@PROJECT_PATH@/assets/images/logo-segoline-horizontal-563x250.png"
       },
       "components": [
         {
