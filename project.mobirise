@@ -55,7 +55,7 @@
         "url": "https://fonts.googleapis.com/css?family=Bebas+Neue:400"
       }
     ],
-    "uniqCompNum": 59,
+    "uniqCompNum": 60,
     "versionPublish": "5.9.4",
     "imageResize": true,
     "chatbutton": {},
@@ -924,6 +924,62 @@
           "_protectedParams": [],
           "_global": true,
           "_once": "footers",
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "1.5rem"
+              },
+              "@media (min-width: 768px)": {
+                "padding": "2.25rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\">Regulamin konkursu na Instagramie</h3>\n          <div class=\"row card-box align-left\">\n            \n            \n            \n            <div class=\"item features-without-image col-12 active\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\">§1. Postanowienia ogólne</h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Organizatorem konkursu „Drukuję, zgadujesz – jakie auto?” (dalej: „Konkurs”) jest SEGOLINE Krzysztof Kardach, NIP 7822378225 (dalej: „Organizator”).<br>Konkurs nie jest sponsorowany, administrowany, ani związany z Instagramem. Instagram nie ponosi odpowiedzialności za jego organizację i przebieg.<br>Konkurs odbywa się na profilu Instagram: @segoline_pl.<br><br>§2. Czas trwania konkursu<br><br>Konkurs rozpoczyna się Danego dnia&nbsp; i kończy się tego samego dnia.<br>Ogłoszenie wyników nastąpi do dnia Następnego poprzez publikację na profilu Organizatora na Instagramie.<br><br>§3. Warunki uczestnictwa<br><br>W konkursie mogą brać udział osoby pełnoletnie oraz osoby niepełnoletnie za zgodą opiekuna prawnego.<br>Uczestnictwo w Konkursie jest bezpłatne i dobrowolne.<br>Aby wziąć udział w Konkursie, uczestnik musi:<br>a) Zaobserwować profil @SEGOLINE_PL na Instagramie,<br>b) Polubić post konkursowy,<br>C) Obserwować relacje na profilu SEGOLINE_PL, gdzie będą ukazywały się zdjęcia poszczególnych etapów drukowania.<br>D) Wykonać zadanie konkursowe: Jak najszybciej odgadnąć jakie auto drukujemy - należy podać markę i model W komentarzu pod postem konkursowym. <br><br>Każdy uczestnik ma tylko jedną możliwość odgadnięcia, co oznacza tylko jedną możliwość skomentowania posta konkursowego.<br>Raz dodany komentarz nie może być edytowany.&nbsp;<br><br>§4. Zasady wyłaniania zwycięzców<br><br>Zwycięzca zostanie wybrany przez Organizatora na podstawie szybkości i poprawności odpowiedzi.<br>Organizator wybierze 1 zwycięzcę danego dnia.&nbsp;<br>Wyniki zostaną opublikowane w komentarzu pod postem na profilu Organizatora.<br><br>§5. Nagrody<br><br>Nagrodą w konkursie jest wybrany produkt firmy Segoline.&nbsp;<br>Nagroda nie podlega wymianie na gotówkę ani inne przedmioty.<br>Zwycięzca ma obowiązek odpowiedzieć na kontakt ze Strony organizatora w terminie 3 Dni.<br><br>§6. Ochrona danych osobowych<br><br>Dane uczestników będą przetwarzane wyłącznie w celu przeprowadzenia Konkursu zgodnie z obowiązującymi przepisami o ochronie danych osobowych.<br>Administratorem danych osobowych jest Organizator.<br><br>§7. Postanowienia końcowe<br><br>Organizator zastrzega sobie prawo do zmian w regulaminie, jeśli nie wpłynie to na pogorszenie warunków uczestnictwa.<br>Organizator ma prawo wykluczyć z Konkursu uczestników, którzy naruszają zasady regulaminu lub działają nieuczciwie.<br>Wszelkie reklamacje można zgłaszać na adres e-mail Wk@Segoline.pl w terminie 7 dni od zakończenia Konkursu.</p>\n              </div>\n            </div>\n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "uEGeXZpqUF",
+          "_anchor": "article07-1n",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
           "_params": {}
         }
       ]
